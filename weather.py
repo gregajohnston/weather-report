@@ -1,9 +1,7 @@
-import requests
-
-
 class Weather:
 
-    @staticmethod
-    def web_query(request_url):
-        response = requests.get(url=request_url)
-        return response.text
+    def main():
+        pass
+
+    if __name__ == '__main__':
+        main()
