@@ -4,11 +4,14 @@ from current_conditions import CurrentConditions
 from ten_day_forecast import TenDayForecast
 from astronomy import Astronomy
 from alerts import Alerts
+from current_hurricane import CurrentHurricane
 
 
 __API_KEY = '0f0931639fcce419'
-__CATEGORIES = 'conditions/forecast10day/astronomy'
-class_list = [CurrentConditions, TenDayForecast, Astronomy, Alerts]
+__CATEGORIES = ('conditions/forecast10day/astronomy/' +
+                'alerts/currenthurricane')
+class_list = [CurrentConditions, TenDayForecast, Astronomy,
+              Alerts, CurrentHurricane]
 
 
 def create_url(api_key, category, zip_code):

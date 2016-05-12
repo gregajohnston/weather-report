@@ -6,5 +6,8 @@ class Alerts:
         print('\n' + ('-'*50))
         print("Alerts: \n")
         for item in alert_list:
-            print('{} '.format(item['description']), end='')
-            print('until {}'.format(item['expires']))
+            if item['description']:
+                print('{} '.format(item['description']), end='')
+                print('until {}'.format(item['expires']))
+            else:
+                print('No active weather alerts.')
