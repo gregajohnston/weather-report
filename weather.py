@@ -5,7 +5,7 @@ from ten_day_forecast import TenDayForecast
 
 
 __API_KEY = '0f0931639fcce419'
-__CATEGORIES = ['conditions/forecast10day']
+__CATEGORIES = 'conditions/forecast10day/astronomy'
 
 
 def create_url(api_key, category, zip_code):
@@ -29,6 +29,7 @@ def welcome_user():
         else:
             print('\"{}\"'.format(zip_code), end="")
             print('is not a valid input. Please try again.')
+            zip_code = ''
 
 
 def main():

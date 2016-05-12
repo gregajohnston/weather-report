@@ -3,10 +3,12 @@ class CurrentConditions:
     @staticmethod
     def format_output(dictionary):
         print('\n' + ('-'*50))
-        print("Current conditions: ")
-        print("{} degrees F".format(
+        print("Current conditions: \n")
+        print("Temperature of {} degrees F".format(
             dictionary['current_observation']['temp_f']))
-        print("{} precipitation today".format(
+        print("Precipitation of {} today".format(
             dictionary['current_observation']['precip_today_string']))
-        print("{} % rel humidity".format(
+        print("Relative humidity of {}%".format(
             dictionary['current_observation']['relative_humidity']))
+        print("Feels like {} degrees F".format(
+            dictionary['current_observation']['feelslike_f']))
