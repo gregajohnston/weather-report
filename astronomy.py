@@ -1,4 +1,4 @@
-class CurrentConditions:
+class Astronomy:
 
     @staticmethod
     def format_output(dictionary):
