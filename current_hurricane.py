@@ -5,8 +5,8 @@ class CurrentHurricane:
         hurricane_list = dictionary['currenthurricane']
         print('\n' + ('-'*50))
         print("Current hurricanes: \n")
-        for hurricane in hurricane_list:
-            if hurricane['stormInfo']['stormName_Nice']:
+        if hurricane_list == []:
+            print("No active \'canes.")
+        else:
+            for hurricane in hurricane_list:
                 print(hurricane['stormInfo']['stormName_Nice'])
-            else:
-                print("No active \'canes.")
