@@ -5,9 +5,9 @@ class Alerts:
         alert_list = dictionary['alerts']
         print('\n' + ('-'*50))
         print("Alerts: \n")
-        for item in alert_list:
-            if item['description']:
+        if alert_list == []:
+            print('No active weather alerts.')
+        else:
+            for item in alert_list:
                 print('{} '.format(item['description']), end='')
                 print('until {}'.format(item['expires']))
-            else:
-                print('No active weather alerts.')
