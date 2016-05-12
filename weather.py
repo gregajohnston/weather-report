@@ -32,8 +32,7 @@ def welcome_user():
 def main():
     ZIP_URL = welcome_user()
     CONDITIONS_URL = create_url(ZIP_URL)
-    current_result = CurrentConditions.return_conditions(CONDITIONS_URL)
-    print(current_result)
+    CurrentConditions.format_output(CONDITIONS_URL)
 
 if __name__ == '__main__':
     main()
